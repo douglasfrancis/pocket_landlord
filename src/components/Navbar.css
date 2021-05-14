@@ -2,7 +2,7 @@
     background-color: #7cb6b8;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 5rem;
     height: 75px;
 }
 
@@ -10,26 +10,29 @@
     color: white;
 }
 
-#sign-btn{
-    background-color: #699b9a;
-    color: white;
+.nav-btn{
     border: unset;
     padding: 0.5rem;
     border-radius: 25px;
     width: 125px;
+}
+
+#sign-btn{
+    background-color: #699b9a;
+    color: white;
     margin: 0 1rem;
-  
 }
 #register-btn{
     background-color: white;
     color: black;
-    border: unset;
-    padding: 0.5rem;
-    border-radius: 25px;
-    width: 125px;
-  
 }
 
 a{
     text-decoration: none;
+}
+#nav-logo{
+    height: 50px;
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
 }

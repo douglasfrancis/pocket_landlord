@@ -6,3 +6,23 @@
     background-color: #f5f5f4;
     padding: 1rem;
 }
+
+#sign-in-view a, #register-view a{
+    color: #7cb6b8;
+    font-weight: bold;
+}
+
+#sign-in-view form, #register-view form{
+   width: 70vw;
+   height: 60vh;
+   margin: 0 auto;
+   padding: 1rem;
+   background: white;
+   text-align: center;
+   border-radius: 10px;
+}
+.auth-head{
+    text-align: center; 
+    margin: 0 auto !important;
+    width: 80vw !important;
+}
