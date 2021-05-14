@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BottomNavigationAction } from "@material-ui/core";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import SignIn from "./components/pages/SignIn";
+import Register from "./components/pages/Register";
+import Footer from "./components/Footer";
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <Router>
+      <Navbar />
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/signin"><SignIn /></Route>
+          <Route path="/register"><Register /></Route>
+          
+        </Switch>
+        <AmplifySignOut />
+       <Footer />
+      </Router>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
